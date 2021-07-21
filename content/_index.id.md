@@ -4,8 +4,8 @@ date = 2020-01-28T16:25:57+02:00
 draft = false
 +++
 
-# PRINCIPLES OF CHAOS ENGINEERING
-Last Update: 2019 March ([changes](https://github.com/chaos-eng/chaos-eng.github.io/pull/23/files))
+# PRINSIP-PRINSIP *CHAOS ENGINEERING*
+Pembaruan terakhir: Maret 2019 ([changes](https://github.com/chaos-eng/chaos-eng.github.io/pull/23/files))
 
 *Chaos Engineering is the discipline of experimenting on a system in order to build confidence in the system’s capability to withstand turbulent conditions in production.*
 
@@ -17,7 +17,7 @@ We need to identify weaknesses before they manifest in system-wide, aberrant beh
 
 An empirical, systems-based approach addresses the chaos in distributed systems at scale and builds confidence in the ability of those systems to withstand realistic conditions.  We learn about the behavior of a distributed system by observing it during a controlled experiment.  We call this *Chaos Engineering*.
 
-## CHAOS IN PRACTICE
+## *CHAOS* DALAM KESEHARIAN
 
 To specifically address the uncertainty of distributed systems at scale, Chaos Engineering can be thought of as the facilitation of experiments to uncover systemic weaknesses.  These experiments follow four steps:
 
@@ -28,11 +28,11 @@ To specifically address the uncertainty of distributed systems at scale, Chaos E
 
 The harder it is to disrupt the steady state, the more confidence we have in the behavior of the system.  If a weakness is uncovered, we now have a target for improvement before that behavior manifests in the system at large.
 
-## ADVANCED PRINCIPLES
+## PRINSIP-PRINSIP LANJUTAN
 
 The following principles describe an ideal application of Chaos Engineering, applied to the processes of experimentation described above.  The degree to which these principles are pursued strongly correlates to the confidence we can have in a distributed system at scale.
 
-### Build a Hypothesis around Steady State Behavior
+### Membangun Hipotesa seputar Perilaku *Steady State* 
 
 Focus on the measurable output of a system, rather than internal attributes of the system.  Measurements of that output over a short period of time constitute a proxy for the system’s steady state.  The overall system’s throughput, error rates, latency percentiles, etc. could all be metrics of interest representing steady state behavior.  By focusing on systemic behavior patterns during experiments, Chaos verifies that the system does work, rather than trying to validate how it works.
 
@@ -40,15 +40,15 @@ Focus on the measurable output of a system, rather than internal attributes of t
 
 Chaos variables reflect real-world events.  Prioritize events either by potential impact or estimated frequency.  Consider events that correspond to hardware failures like servers dying, software failures like malformed responses, and non-failure events like a spike in traffic or a scaling event.  Any event capable of disrupting steady state is a potential variable in a Chaos experiment.
 
-### Run Experiments in Production
+### Menjalankan Eksperimen di *Production*
 
 Systems behave differently depending on environment and traffic patterns.  Since the behavior of utilization can change at any time, sampling real traffic is the only way to reliably capture the request path.  To guarantee both authenticity of the way in which the system is exercised and relevance to the current deployed system, Chaos strongly prefers to experiment directly on production traffic.
 
-### Automate Experiments to Run Continuously
+### Mengotomasi Ekeperimen untuk berjalan berkesinambungan
 
 Running experiments manually is labor-intensive and ultimately unsustainable.  Automate experiments and run them continuously.  Chaos Engineering builds automation into the system to drive both orchestration and analysis.
 
-### Minimize Blast Radius
+### Meminimalkan Cakupan Kerusakan
 
 Experimenting in production has the potential to cause unnecessary customer pain. While there must be an allowance for some short-term negative impact, it is the responsibility and obligation of the Chaos Engineer to ensure the fallout from experiments are minimized and contained.
 
